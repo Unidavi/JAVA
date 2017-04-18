@@ -211,8 +211,9 @@ public class CadPessoa extends MetodosGlobais {
         });
         jPanel4.add(edtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 80, 30));
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Nome:");
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 40, -1));
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 70, 12));
 
         edtNome.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -221,8 +222,9 @@ public class CadPessoa extends MetodosGlobais {
         });
         jPanel4.add(edtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 330, 30));
 
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("E-mail:");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 40, -1));
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 70, 12));
 
         edtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -231,11 +233,13 @@ public class CadPessoa extends MetodosGlobais {
         });
         jPanel4.add(edtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 330, 30));
 
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Endereço:");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 70, -1));
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 70, 12));
 
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("Telefone:");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 60, -1));
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 70, 12));
 
         jLabel9.setText("Numero:");
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
@@ -247,8 +251,9 @@ public class CadPessoa extends MetodosGlobais {
         });
         jPanel4.add(edtEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 330, 30));
 
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Bairro:");
-        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 50, -1));
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 70, 12));
 
         edtNumero.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -267,8 +272,10 @@ public class CadPessoa extends MetodosGlobais {
         });
         jPanel4.add(edtCEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 130, 30));
 
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel14.setText("CPF /CNPJ:");
-        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        jLabel14.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 70, 12));
 
         edtCPF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -326,14 +333,17 @@ public class CadPessoa extends MetodosGlobais {
         jPanel4.add(edtCodigoPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 55, 30));
         edtCodigoPais.getAccessibleContext().setAccessibleName("");
 
-        jLabel3.setText("Cód.Cidade:");
-        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 70, -1));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setText("Cidade:");
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 70, 12));
 
-        jLabel5.setText("Cód País:");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 60, -1));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText("País:");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 70, 12));
 
-        jLabel7.setText("Cód.Estado:");
-        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 70, -1));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel7.setText("Estado:");
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 70, 12));
 
         btnLocalizaEstado.setText("...");
         btnLocalizaEstado.addActionListener(new java.awt.event.ActionListener() {
@@ -376,8 +386,9 @@ public class CadPessoa extends MetodosGlobais {
         });
         jPanel4.add(edtBairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 190, 30));
 
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel11.setText("Código:");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 60, 30));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 70, 12));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
