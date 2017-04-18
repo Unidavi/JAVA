@@ -6,7 +6,6 @@ import Principal.MetodosGlobais;
 import VisaoConsultasCadastro.ConsultaPaises;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,22 +18,19 @@ public class CadPais extends MetodosGlobais {
 
     public CadPais() {
         initComponents();
-        //Centro();
+        Centro();
         HabilitaCampos(false);
     }
 
     private void HabilitaCampos(boolean habilita) {
         edtCodigo.setEnabled(!habilita);
         edtDescricao.setEnabled(habilita);
-
         btnGravar.setEnabled(habilita);
         btnCancelar.setEnabled(habilita);
         btnConsulta.setEnabled(!habilita);
         btnExcluir.setEnabled(habilita);
 
-        if (habilita) {
-
-        } else {
+        if (!habilita) {
             LimpaTela();
         }
     }

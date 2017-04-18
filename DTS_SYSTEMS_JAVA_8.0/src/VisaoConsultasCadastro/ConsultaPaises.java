@@ -203,7 +203,6 @@ public class ConsultaPaises extends MetodosGlobais {
         try {
             conn = Conexao.getConexao();
             stmt = conn.createStatement();
-            //Nessa Parte é passado po parametro os Dados da Variavel "SQLConsulta_Pais" que contem o sql da pesquisa.
             rs = stmt.executeQuery(SQLConsulta_Pais);
             while (rs.next()) {
                 int auxcd_pais = rs.getInt("cd_pais");
@@ -231,7 +230,6 @@ public class ConsultaPaises extends MetodosGlobais {
         modelo.addColumn("Nome");
         PaisDB paisdb = new PaisDB();
         ArrayList<Pais> paises = paisdb.getTodos();
-        //ArrayList<Usuario> usuarios = SQLConsultagetTodos_Completo();
         for (Pais auxPais : paises) {
             modelo.addRow(new Object[]{
                 auxPais.getCd_pais(),
@@ -239,7 +237,6 @@ public class ConsultaPaises extends MetodosGlobais {
             });
         }
         tbGrid.setModel(modelo);
-
     }
 
     private void ListaPaisesParametrosCompleto() {
@@ -248,8 +245,6 @@ public class ConsultaPaises extends MetodosGlobais {
         modelo.addColumn("Filial");
         modelo.addColumn("Login");
         modelo.addColumn("Senha");
-        //Nesta Parte o ArrayList dos Usuarios(Que chama a Classe Usuario) recebe por parametro o Metodo "SQLConsultagetTodos_Completo()" que tera os dados da pesquisa
-        //Este Metodo Chama o ArrayList  que tera os dados e passa para a DefaultTableModel
         ArrayList<Usuario> usuarios = SQLConsultagetTodos_Completo();
         for (Usuario auxUsuario : usuarios) {
             modelo.addRow(new Object[]{
@@ -267,7 +262,6 @@ public class ConsultaPaises extends MetodosGlobais {
         ListaTodosPaises();
         cbCampo.setModel(getComboCampo());
         cbValor.setModel(getComboValor());
-        //Tela no Centro
         Centro();
         this.campoCodigo = campoCodigo;
     }
@@ -327,11 +321,6 @@ public class ConsultaPaises extends MetodosGlobais {
         jLabel3.setText("Campo:");
 
         cbCampo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbCampo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCampoActionPerformed(evt);
-            }
-        });
 
         cbValor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -441,22 +430,16 @@ public class ConsultaPaises extends MetodosGlobais {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tbGridMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbGridMouseClicked
-        // TODO add your handling code here:
         int linha = tbGrid.getSelectedRow();
         if (linha >= 0) {
             String auxCodigo = tbGrid.getValueAt(linha, 0).toString();
-            String auxNome = tbGrid.getValueAt(linha, 1).toString();
             campoCodigo.setText(auxCodigo);
         }
     }//GEN-LAST:event_tbGridMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void cbCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCampoActionPerformed
-    }//GEN-LAST:event_cbCampoActionPerformed
 
     private void btnPesquisaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPesquisaMouseClicked
         ValidaCampoPesquisa();
@@ -471,7 +454,6 @@ public class ConsultaPaises extends MetodosGlobais {
     }//GEN-LAST:event_edtPesquisaKeyPressed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        // TODO add your handling code here:
         int linha = tbGrid.getSelectedRow();
         if (linha >= 0) {
             String auxCodigo = tbGrid.getValueAt(linha, 0).toString();
@@ -482,7 +464,6 @@ public class ConsultaPaises extends MetodosGlobais {
     }//GEN-LAST:event_jButton3MouseClicked
 
 private void tbGridKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tbGridKeyPressed
-// TODO add your handling code here:
     if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
         int linha = tbGrid.getSelectedRow();
         if (linha >= 0) {
