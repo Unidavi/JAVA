@@ -42,7 +42,7 @@ public class FormularioNotaFederal extends MetodosGlobais {
     VendaDB vendacompletodb = new VendaDB();
     ItemDB itemdb = new ItemDB();
 
-    private static final String sqlBuscaPessoa = "SELECT * FROM PESSOA_SIMPLES WHERE cd_pessoa=?";
+    private static final String sqlBuscaPessoa = "SELECT * FROM PESSOA WHERE cd_pessoa=?";
     private static final String sqlBuscaTipoNota = "SELECT * FROM TIPO_NOTA_SIMPLES WHERE cd_filial=? and cd_tipo=?";
     private static final String sqlBuscaQuantidadeEPreco
             = "SELECT                "
@@ -1432,7 +1432,7 @@ public class FormularioNotaFederal extends MetodosGlobais {
             Connection conn = null;
             Statement stmt = null;
             ResultSet rs = null;
-            String sql = "select * from pessoa_simples where pessoa_simples.nm_pessoa= '" + cbVendedor.getSelectedItem() + "'";
+            String sql = "select * from pessoa where pessoa.nm_pessoa= '" + cbVendedor.getSelectedItem() + "'";
             try {
                 conn = Conexao.getConexao();
                 stmt = conn.createStatement();
@@ -1454,7 +1454,7 @@ public class FormularioNotaFederal extends MetodosGlobais {
             Connection conn = null;
             Statement stmt = null;
             ResultSet rs = null;
-            String sql = "select * from pessoa_simples where pessoa_simples.nm_pessoa= '" + cbCliente.getSelectedItem() + "'";
+            String sql = "select * from pessoa where pessoa.nm_pessoa= '" + cbCliente.getSelectedItem() + "'";
             try {
                 conn = Conexao.getConexao();
                 stmt = conn.createStatement();

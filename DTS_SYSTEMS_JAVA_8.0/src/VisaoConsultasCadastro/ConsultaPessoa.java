@@ -141,7 +141,7 @@ public class ConsultaPessoa extends MetodosGlobais {
             auxValor = "LIKE UPPER('" + auxedtPesquisa + "%')";
         }
 
-        SQLValorCamposComboboxCampo_E_Valor = "select * from PESSOA_SIMPLES where " + auxCampo + " " + auxValor;
+        SQLValorCamposComboboxCampo_E_Valor = "select * from PESSOA where " + auxCampo + " " + auxValor;
         //A Variavel global "SQLConsulta_Pessoa" recebe por parametro a variavel "SQLValorCamposComboboxCampo_E_Valor"
         SQLConsulta_Pessoa = SQLValorCamposComboboxCampo_E_Valor;
     }

@@ -15,12 +15,12 @@ import java.util.GregorianCalendar;
  */
 public class CadTipoNota extends MetodosGlobais {
 
-    private static final String sqlBuscaPessoa = "SELECT * FROM PESSOA_SIMPLES WHERE cd_pessoa=?";
+    private static final String sqlBuscaPessoa = "SELECT * FROM PESSOA WHERE cd_pessoa=?";
     private static final String sqlBuscaQuantidadeEPreco = "SELECT itens_orc_simples.* FROM itens_orc_simples WHERE cd_movimento=? and CD_SEQ_ITE_PRO=?";
     private static final String sqlBuscaCondicaoPagamento = "SELECT * FROM COND_PAG WHERE CD_COND=?";
 
-    private static final String sqlBuscaCodigoVendedor = "SELECT * FROM pessoa_simples where pessoa_simples.cd_pessoa=?";
-    private static final String sqlCodigoCliente = "SELECT * FROM pessoa_simples where pessoa_simples.cd_pessoa=?";
+    private static final String sqlBuscaCodigoVendedor = "SELECT * FROM pessoa where pessoa.cd_pessoa=?";
+    private static final String sqlCodigoCliente = "SELECT * FROM pessoa where pessoa.cd_pessoa=?";
 
     //private static final String sqlBuscaProduto = "SELECT * FROM produto_simples WHERE cd_ref=?";
     //Traz o preço no sql abaixo:
@@ -81,8 +81,8 @@ public class CadTipoNota extends MetodosGlobais {
      COMMIT WORK;
      */
     private static final String sqlBuscaTipoNota = "SELECT * FROM tipo_nota_simples WHERE CD_TIPO=?";
-    private static final String sqlTodos = "SELECT * FROM PESSOA_SIMPLES";
-    private static final String sqlBuscaVendaPeloMovimento = "SELECT * FROM ORCAMENTO_SIMPLES WHERE ORCAMENTO_SIMPLES.CD_MOVIMENTO=?";
+    private static final String sqlTodos = "SELECT * FROM PESSOA";
+    private static final String SQL_BUSCA_VENDA_PELO_MOVIMENTO = "SELECT * FROM ORCAMENTO_SIMPLES WHERE ORCAMENTO_SIMPLES.CD_MOVIMENTO=?";
 
     PessoaDB pes = new PessoaDB();
     PessoaDB pessoadb = new PessoaDB();
@@ -607,7 +607,7 @@ public class CadTipoNota extends MetodosGlobais {
      Connection conn = null;
      Statement stmt = null;
      ResultSet rs = null;
-     String sql = "select * from pessoa_simples where pessoa_simples.nm_pessoa= '" + cbVendedor.getSelectedItem() + "'";
+     String sql = "select * from pessoa where pessoa.nm_pessoa= '" + cbVendedor.getSelectedItem() + "'";
      try {
      conn = Conexao.getConexao();
      stmt = conn.createStatement();
@@ -627,7 +627,7 @@ public class CadTipoNota extends MetodosGlobais {
      Connection conn = null;
      Statement stmt = null;
      ResultSet rs = null;
-     String sql = "select * from pessoa_simples where pessoa_simples.nm_pessoa= '" + cbCliente.getSelectedItem() + "'";
+     String sql = "select * from pessoa where pessoa.nm_pessoa= '" + cbCliente.getSelectedItem() + "'";
      try {
      conn = Conexao.getConexao();
      stmt = conn.createStatement();

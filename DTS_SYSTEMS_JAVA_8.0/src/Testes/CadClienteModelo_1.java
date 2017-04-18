@@ -32,7 +32,7 @@ public class CadClienteModelo_1 extends MetodosGlobais {
     private static final String sqlBuscaNomeCidade = "SELECT * FROM municipio WHERE cd_municipio=? and cd_estado=?";
     private static final String sqlBuscaNomeEstado = "SELECT estado.* FROM estado where estado.cd_estado=?";
     private static final String sqlBuscaNomePais = "SELECT  PAIS.* FROM PAIS where pais.CD_pais=?";
-    private static final String sqlBuscaPessoa = "SELECT * FROM PESSOA_SIMPLES WHERE cd_pessoa=?";
+    private static final String sqlBuscaPessoa = "SELECT * FROM PESSOA WHERE cd_pessoa=?";
 
     /**
      * Creates new form CadPessoa
